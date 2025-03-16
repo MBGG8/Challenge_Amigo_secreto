@@ -2,12 +2,12 @@
 let amigos = [];
 
 function agregarAmigo() {
-  let nombre = document.getElementById("amigo").value;
-  if (nombre === "") {
+  let nombre = document.getElementById("amigo");
+  if (nombre.value.trim() === "") {
     alert("Por favor, inserte un nombre.");
   } else {
-    amigos.push(nombre);
+    amigos.push(nombre.value);
     console.log(amigos);
-    document.getElementById("amigo").value = "";
+    nombre.value = "";
   }
 }
