@@ -21,3 +21,18 @@ function actulizarLista() {
     lista.innerHTML += "<li>" + amigos[i] + "</li>";
   }
 }
+
+function sortearAmigo() {
+  let resultado = document.getElementById("resultado");
+  resultado.innerHTML = "";
+
+  if (amigos.length === 0) {
+    alert("Recuerda, primero ingresa nombres de amigos");
+    return;
+  } else {
+    let indice = Math.floor(Math.random() * amigos.length);
+    resultado.innerHTML += "<li>" + amigos[indice] + "</li>";
+
+    console.log("Amigo elegido:", indice);
+  }
+}
